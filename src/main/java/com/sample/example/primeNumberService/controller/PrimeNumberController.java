@@ -1,7 +1,5 @@
 package com.sample.example.primeNumberService.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,12 +23,12 @@ public class PrimeNumberController {
 	 String getPrimeNumbers(@PathVariable Long number) {
 		try {
 			if (validateInputRequest.isValidNumber(number))
-				return primeNumberService.genaratePrimeNumbersforGivenRange(number);
+				return primeNumberService.fetchPrimeNumbers(number);
 			else {
 				throw new InvalidPrimeNumberValueException(number+"");
 			}
 		} catch (InvalidPrimeNumberValueException e) {
-			throw new InvalidPrimeNumberValueException(number+"");
+			throw new InvalidPrimeNumberValueException(number.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new PrimeNumberServiceException();

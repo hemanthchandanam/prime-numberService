@@ -44,13 +44,9 @@ public class PrimeNumberServiceTest {
     	 long value =10L;
     	 
     	String returnString = primeNumberService.fetchPrimeNumbers(value);
-    	
     	Mockito.when(primeNumberComponent.getPrimeNumbersForGivenRange(Mockito.anyLong(), Mockito.anyLong())).thenReturn("2,3,5,7,");
-    	
     	verify(primeNumberComponent, times(1)).getPrimeNumbersForGivenRange(2,10L);
     	Assert.notNull("Return value should not be null ",returnString);
-    	
-    	 
     	 
      }
 
