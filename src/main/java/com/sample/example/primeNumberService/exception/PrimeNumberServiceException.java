@@ -10,7 +10,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.Value;
 
-@AllArgsConstructor
 @Getter
 @Setter
 @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR, reason = PrimeNumberConstant.ERROR_MESSAGE)

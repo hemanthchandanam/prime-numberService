@@ -30,7 +30,6 @@ public class PrimeNumberController {
 		} catch (InvalidPrimeNumberValueException e) {
 			throw new InvalidPrimeNumberValueException(number.toString());
 		} catch (Exception e) {
-			e.printStackTrace();
 			throw new PrimeNumberServiceException();
 		}
 
