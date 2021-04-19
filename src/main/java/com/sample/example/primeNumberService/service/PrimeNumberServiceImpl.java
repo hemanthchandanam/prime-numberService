@@ -22,10 +22,11 @@ public class PrimeNumberServiceImpl implements PrimeNumberService {
 		int p;
 
 		if (number > PrimeNumberConstant.DENOMINATOR_VALUE) {
-			p = (int) (number / PrimeNumberConstant.DENOMINATOR_VALUE);
+			p = (int) (number / PrimeNumberConstant.THREAD_POOL_SIZE);
 			return executeService.execute(p, number);
 
 		} else {
+			
 			return primeNumberComponent.getPrimeNumbersForGivenRange(2, number);
 		}
 

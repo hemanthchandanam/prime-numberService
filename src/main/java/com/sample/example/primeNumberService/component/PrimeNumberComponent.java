@@ -2,11 +2,14 @@ package com.sample.example.primeNumberService.component;
 
 import org.springframework.stereotype.Component;
 
+import com.sample.example.primeNumberService.PrimeNumberConstant;
 import com.sample.example.primeNumberService.exception.PrimeNumberServiceException;
 
 @Component
 public class PrimeNumberComponent {
-
+	
+	
+	
 	public String getPrimeNumbersForGivenRange(long start, long end) {
 		
 		
@@ -29,26 +32,10 @@ public class PrimeNumberComponent {
 				}
 			}
 			if (counter == 2) {
-				primeNumbers.append(i).append(",");
+				primeNumbers.append(i).append(PrimeNumberConstant.SEPARATOR);
 			}
 		}
-		System.out.println(primeNumbers);
+		
 		return primeNumbers.toString();
-	}
-
-	
-	
-	public static void main(String[] arg) {
-		
-		PrimeNumberComponent c = new PrimeNumberComponent();
-		
-		c.getPrimeNumbersForGivenRange(21L,90L);
-		
-		
-		
-	}
-	
-	
-	
-	
+	}	
 }
