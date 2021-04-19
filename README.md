@@ -1,6 +1,6 @@
 ######### prime-numberService #########
 
-# Run the Application
+# PrimeNumberService
   
   mvn spring-boot:run
 
