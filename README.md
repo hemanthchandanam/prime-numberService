@@ -2,9 +2,9 @@
 
 # PrimeNumberService
   
-  mvn spring-boot:run
+ Build command: mvn spring-boot:run
 
-#Local Build
+#Local Build Info
 
 Server port : 8080
 URL :http://localhost:8080/primeNumbers/{number} 
